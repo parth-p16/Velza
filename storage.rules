@@ -1,0 +1,38 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Profile photos:
+    // Any authenticated user can view profile pictures.
+    // Users can only upload and update their own profile picture.
+    match /profiles/{userId}.jpg {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && request.auth.uid == userId
+                   && request.resource.size < 10 * 1024 * 1024
+                   && request.resource.contentType.matches('image/.*');
+    }
+
+    // Chat attachments & shared wallpapers (images, videos, voice notes, documents, wallpaper):
+    match /chats/{chatId}/{mediaType}/{fileName} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated()
+                   && request.resource.size < 50 * 1024 * 1024;
+    }
+
+    // Status media:
+    match /statuses/{statusId}/{fileName} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated()
+                   && request.resource.size < 50 * 1024 * 1024;
+    }
+
+    // Lock down any other storage path
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

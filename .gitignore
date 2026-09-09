@@ -1,0 +1,114 @@
+# Miscellaneous / OS
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+Thumbs.db
+
+# IDE & Editor Files
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+.metadata
+*.metadata.json
+
+# Crash dumps & Local Diagnostics / Scratch logs
+hs_err_pid*
+*_log.txt
+build_log.txt
+build_output.txt
+build_verbose.txt
+doctor_log.txt
+error.txt
+flutter_build_log.txt
+version.txt
+version_log.txt
+where_flutter.txt
+
+# Flutter / Dart / Pub
+**/doc/api/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+build/
+/build/
+**/build/
+/coverage/
+
+# Obfuscation & Symbolication
+app.*.symbols
+app.*.map.json
+
+# Android Build & Local Configuration
+/android/app/debug
+/android/app/profile
+/android/app/release
+android/.gradle/
+**/.gradle/
+android/app/.cxx/
+**/.cxx/
+android/.kotlin/
+**/.kotlin/
+captures/
+**/captures/
+local.properties
+**/local.properties
+
+# Android Keystore, Signing & Credentials
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+*key.properties
+keystore.properties
+
+# Environment Variables & Secrets
+.env
+.env.*
+*.env
+
+# Firebase Backend & Service Account Secrets (Admin SDK)
+*-service-account*.json
+service-account*.json
+serviceAccount*.json
+firebase-adminsdk*.json
+functions/.runtimeconfig.json
+functions/node_modules/
+**/node_modules/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# iOS / macOS local & build files
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/.last_build_id
+**/Pods/
+**/.symlinks/
+**/DerivedData/
+xcuserdata/
+*.mode1v3
+*.mode2v3
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+
+# Firebase Client Configuration (Protected for Public Repository)
+# Keeps your live backend project ID and client API keys private.
+# See android/app/google-services.json.example and lib/firebase_options.dart.example
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+lib/firebase_options.dart

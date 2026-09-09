@@ -1,0 +1,65 @@
+name: velza
+description: "Velza - Premium Modern Chat Application"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  provider: ^6.1.2
+
+  # Firebase Services
+  firebase_core: ^2.27.0
+  firebase_auth: ^4.17.8
+  cloud_firestore: ^4.15.8
+  firebase_storage: ^11.6.8
+  firebase_messaging: ^14.7.19
+
+  # Authentication
+  google_sign_in: ^6.2.1
+
+  # Caching and UI
+  cached_network_image: ^3.3.1
+  google_fonts: ^8.0.0
+  intl: ^0.19.0
+  path_provider: ^2.1.1
+
+  # Media, File Picking & Audio
+  image_picker: ^1.0.7
+  file_picker: ^8.0.0
+  record: ^5.1.2
+  audioplayers: ^6.0.0
+  video_player: ^2.8.2
+  uuid: ^4.3.3
+
+  # Cupertino Icons for iOS styled components
+  cupertino_icons: ^1.0.6
+  shared_preferences: ^2.2.2
+  local_auth: ^3.0.2
+  crypto: ^3.0.7
+  cryptography: ^2.9.0
+  flutter_secure_storage: ^10.3.1
+
+dependency_overrides:
+  record_linux: ^1.1.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  # Add custom assets for onboarding and branding
+  assets:
+    - assets/images/
+
